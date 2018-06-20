@@ -3,21 +3,171 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Saiba mais</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  <ion-card>
+      <h1><b>Ansiedade</b></h1>
+      <img src="../../assets/imgs/ANSIE.jpg">
+      <br />
+      <h2> O que é?</h2>
+      <br />
+      <P>
+          Ansiedade é um transtorno que faz com que a pessoa tenha vários sentimentos pessimista
+           como medo, angustia ou perturbações acerca do futuro. Esse tipo de transtorno não é simples
+            de lidar, pois são tratados com leviandade e  pouco discutidos na atualidade. Assim, muitas
+             pessoas não sabem que possuem ansiedade, tratando apenas como uma preocupação comum que se 
+             não tratada corretamente pode-se desenvolver a depressão.
+      </P>
+      <P>
+          Segundo a Redação Minha Vida ‘A ansiedade é uma emoção normal do ser humano, comum ao se enfrentar
+           algum problema no trabalho, antes de uma prova ou diante de decisões difíceis do dia a dia. 
+          No entanto, a ansiedade excessiva pode se tornar uma doença, ou melhor, um distúrbio de ansiedade.’
+      </P>
+      <br />
+    <img src="../../assets/imgs/tipo.jpg">
+    <br />
+    </ion-card>
+    <ion-card>
+    <h2> Transtorno do Pânico</h2>
+    <br />
+    <img src="../../assets/imgs/pan.jpg">
+    <br />
+    <p>
+        A síndrome ou transtorno do pânico (ansiedade paroxística episódica) é uma doença que se caracteriza
+         pela ocorrência repentina, inesperada e de certa forma inexplicável de crises de ansiedade aguda marcadas
+          por muito medo e desespero, associadas a sintomas físicos e emocionais aterrorizantes, que atingem sua
+           intensidade máxima em até dez minutos. Durante o ataque de pânico, em geral de curta duração, a pessoa
+            experimenta a nítida sensação de que vai morrer, ou de que perdeu o controle sobre si mesma e vai
+             enlouquecer.
+    </p>
+    <p> Leia mais em <code>https://drauziovarella.uol.com.br/doencas-e-sintomas/transtornosindrome-do-panico/</code></p>
+    </ion-card>
+    <ion-card>
+    <h2>
+        •	Transtorno de ansiedade generalizada (TAG)
+    </h2>
+    <br />
+    <img src="../../assets/imgs/gene.jpg">
+    <br />
+    <p>
+        O transtorno da ansiedade generalizada (TAG), segundo o manual de classificação de doenças mentais (DSM.IV),
+         é um distúrbio caracterizado pela “preocupação excessiva ou expectativa apreensiva”, persistente e de difícil
+          controle, que perdura por seis meses no mínimo e vem acompanhado por três ou mais dos seguintes sintomas:
+           inquietação, fadiga, irritabilidade, dificuldade de concentração, tensão muscular e perturbação do sono. 
+    </p>
+    <p> Leia mais em <code>https://drauziovarella.uol.com.br/doencas-e-sintomas/tag-transtorno-da-ansiedade-generalizada/</code></p>
+  </ion-card>
+  <ion-card>
+    <h2> •	 Fobia Social </h2>
+    <br />
+    <img src="../../assets/imgs/fsocial.jpg">
+    <br />
+    <p>
+        A fobia social está associada ao medo que as pessoas tem em se comunicar com alguém.
+         Há pessoas que são tímidas ou têm vergonha.No entanto, quem tem esse tipo de fobia a amplitude
+          do medo se dá em coisas simples como um aperto de mão, ou até em um contato visual e estas
+           querem evitar a todo custo ter interação com outras pessoas.
+       </p>
+       <p>Algumas pessoas confundem timidez com a Fobia Social, 
+         mas há diferenças muitos significantes. A timidez faz com que algumas pessoas sintam vergonha, 
+         mas isso não afeta o caminhar da vida. Já a Fobia Social limita drasticamente o desenvolver de atividades
+          rotineiras, como usar um banheiro público, ou entrar numa sala em que as pessoas já estão sentadas.
+    </p>
+    <p>
+      Leia mais em <code>https://www.vittude.com/blog/fobia-social-causas-tratamentos-remedio/</code>
+    </p>
+  </ion-card>
+  <ion-card>
+    <h2> •	Transtorno obsessivo-compulsivo(TOC) </h2>
+    <br />
+    <img src="../../assets/imgs/toc.jpg">
+    <br />
+    <p>
+        O Transtorno Obsessivo-Compulsivo (TOC) é um transtorno comum, crônico e duradouro.
+         É caracterizado pela presença de obsessões e/ou compulsões.</p>
+       <p> O Transtorno Obsessivo Compulsivo é considerado uma doença mental grave.
+          Ela está entre as dez maiores causas de incapacitação, de acordo com a Organização Mundial de Saúde.
+           Estima-se que cerca de 4 milhões de brasileiros sofram com a doença. </p>
+           <p>
+        Obsessões são pensamentos, impulsos ou imagens recorrentes e persistentes que são vivenciados como 
+        intrusivos e indesejados. Compulsões são comportamentos repetitivos ou atos mentais em que um indivíduo
+         se sente compelido a executar em resposta a uma obsessão ou de acordo com regras que devem ser aplicadas 
+         rigidamente.</p> 
+         <p>
+            Leia mais em: <code>https://www.vittude.com/blog/toc-transtorno-obsessivo-compulsivo-sinais-sintomas-e-tratamentos/</code> 
+         </p>
+        </ion-card>
+        <ion-card>
+         <H2>
+            •	Transtorno de estresse pós-traumático
+         </H2>
+         <br />
+         <img src="../../assets/imgs/traum.jpg">
+         <br />
+         <p>
+            O transtorno do estresse pós-traumático (TEPT) pode ser definido como um distúrbio da ansiedade
+             caracterizado por um conjunto de sinais e sintomas físicos, psíquicos e emocionais. Esse quadro ocorre
+              devido à pessoa ter sido vítima ou testemunha de atos violentos ou de situações traumáticas que representaram
+               ameaça à sua vida ou à vida de terceiros. Quando ele se recorda do fato, revive o episódio como se estivesse
+                ocorrendo naquele momento e com a mesma sensação de dor e sofrimento vivido na primeira vez. 
+            Essa recordação, conhecida como revivescência, desencadeia alterações neurofisiológicas e mentais. 
+         </p>
+         <P>
+            Leia mais em: 
+            http://www.minhavida.com.br/saude/temas/transtorno-do-estresse-pos-traumatico
+            
+         </P>
+        </ion-card>
+        <ion-card>
+         <h2>
+            •	Fobias específicas
+         </h2>
+         <br />
+         <img src="../../assets/imgs/esp.jpg">
+         <br />
+         <p>
+            As fobias específicas, antes chamadas fobias simples, são medos exagerados, persistentes e irracionais diante de algo ou alguma situação.
+          </p> <p> Esse medo pode desencadear uma intensa crise de ansiedade no indivíduo, com sintomas semelhantes aos de um ataque de pânico, como falta de ar, suor excessivo, formigamentos, enjoos e tontura.   
+         </p>
+         <b> FOBIAS MAIS COMUNS</b>
+       <p>  o	Claustrofobia – medo de locais fechados</p> 
+       <p>  o	Acrofobia – medo de altura</p> 
+       <p>  o	Aracnofobia – medo de aranhas</p> 
+       <p>  o	Necrofobia – medo da morte</p> 
+       <p>  o	Carcinomafobia – medo de câncer</p> 
+       <p>  o	Catsaridafobia – medo de baratas</p> 
+       <p>  o	Brontofobia – medo de tempestades, trovões</p> 
+       <p>  o	Cardiofobia – medo de doenças do coração</p> 
+       <p>  o	Hematofobia – medo de sangue</p> 
+       <p>  o	Nictofobia – medo da noite</p> 
+    
+  </ion-card>
+
+  <ion-card>
+    <h2> SINTOMAS E EFEITOS </h2>
+    <br />
+    <img src="../../assets/imgs/efeitos.jpg">
+    <br />
+
+    <h2> Sintomas Físicos</h2>
+    <br />
+    <img src="../../assets/imgs/sinfi.jpg">
+    <br />
+     <h2> Sintomas Psicológico</h2>
+     <br />
+    <img src="../../assets/imgs/sinps.jpg">
+    <br />
+
+    <br />
+    <br />
+    <button ion-button full (click)="Tratamento()"> Tratamento </button>
+    <br />
+    <br />
+    <br />
+  </ion-card>
+  
+
 </ion-content>

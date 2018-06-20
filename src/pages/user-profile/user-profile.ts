@@ -70,7 +70,7 @@ export class UserProfilePage {
   private editUser(photoUrl?: string): void {
     this.userService
       .edit({
-        nome: this.currentUser.name,
+        nome: this.currentUser.nome,
         username: this.currentUser.username,
         photo: photoUrl || this.currentUser.photo || ''
       }).then(() => {

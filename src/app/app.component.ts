@@ -9,7 +9,10 @@ import { SelecionePage } from './../pages/selecione/selecione';
 import { User } from './../models/user.model';
 import { UserService } from './../providers/user.service';
 
+
+
 import * as firebase from 'firebase/app';
+import { SobrePage } from '../pages/sobre/sobre';
 
 @Component({
   templateUrl: 'app.html'

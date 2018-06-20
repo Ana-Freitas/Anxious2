@@ -1,4 +1,4 @@
-page-list {
+page-tratamento {
     .scroll-content{ //imagem 
         background: #45b7bd;
         height: 100vh; //imagem em tela inteira
@@ -32,10 +32,10 @@ page-list {
         font-family: Batang;
         text-indent:4em //recuo da pagina
     }
+
     ion-navbar.toolbar > * {
         text-align: center;
         background: pink !important;
     }
-
     
 }

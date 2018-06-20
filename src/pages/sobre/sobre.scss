@@ -1,0 +1,27 @@
+page-sobre {
+   
+        .scroll-content{ //imagem 
+            background:url('../assets/imgs/img3.jpg') no-repeat;
+            height: 100vh; //imagem em tela inteira
+            background-attachment: fixed;
+            background-size: cover; //nao deixar espaço em branco
+            }
+    
+            .card-md {
+                -webkit-padding-before: 20px;
+                -webkit-padding-after: 30px;
+            }
+            .card-md h1, h4, b {
+                color: #fb5a76;
+            }
+            
+            .card-md p {
+                text-align: justify;
+                font-size: 1.6rem;
+                font-family: Batang;
+                text-indent:4em //recuo da pagina
+            }
+            
+    
+    
+}

@@ -11,6 +11,8 @@ import { SelecionePage } from '../pages/selecione/selecione';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { LoginPage } from '../pages/login/login';
 import { ChatPage } from '../pages/chat/chat';
+import { ListPage } from './../pages/list/list';
+import { SobrePage } from '../pages/sobre/sobre';
 import { CapitalizePipe } from './../pipes/capitalize.pipe';
 
 import { AuthService } from './../providers/auth.service';
@@ -29,6 +31,7 @@ import { MessageBoxComponent } from './../components/message-box/message-box.com
 import { UserInfoComponent } from './../components/user-info/user-info.component';
 import { UserMenuComponent } from './../components/user-menu/user-menu.component';
 import { UserProfilePage } from './../pages/user-profile/user-profile';
+import { TratamentoPage } from '../pages/tratamento/tratamento';
 
 const firebaseAppConfig: FirebaseAppConfig = {
   apiKey: "AIzaSyC4DC1iayAoawdRqOTfK1JkHchYNPcxag4",
@@ -47,6 +50,9 @@ const firebaseAppConfig: FirebaseAppConfig = {
     CadastroPage,
     LoginPage,
     ChatPage,
+    ListPage,
+    SobrePage,
+    TratamentoPage,
     CapitalizePipe,
     CustomLoggedHeaderComponent,
     MessageBoxComponent,
@@ -68,10 +74,13 @@ const firebaseAppConfig: FirebaseAppConfig = {
   entryComponents: [
     MyApp,
     HomePage,
+    ListPage,
     SelecionePage,
     CadastroPage,
     LoginPage,
     ChatPage,
+    SobrePage,
+    TratamentoPage,
     UserProfilePage
   ],
   providers: [
