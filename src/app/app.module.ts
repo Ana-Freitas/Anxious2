@@ -13,6 +13,11 @@ import { LoginPage } from '../pages/login/login';
 import { ChatPage } from '../pages/chat/chat';
 import { ListPage } from './../pages/list/list';
 import { SobrePage } from '../pages/sobre/sobre';
+import { UserProfilePage } from './../pages/user-profile/user-profile';
+import { TratamentoPage } from '../pages/tratamento/tratamento';
+import { ExerciciosPage } from '../pages/exercicios/exercicios';
+import { DicasPage } from   '../pages/dicas/dicas';
+import { ContatoPage } from '../pages/contato/contato'
 import { CapitalizePipe } from './../pipes/capitalize.pipe';
 
 import { AuthService } from './../providers/auth.service';
@@ -30,8 +35,7 @@ import { CustomLoggedHeaderComponent } from './../components/custom-logged-heade
 import { MessageBoxComponent } from './../components/message-box/message-box.component';
 import { UserInfoComponent } from './../components/user-info/user-info.component';
 import { UserMenuComponent } from './../components/user-menu/user-menu.component';
-import { UserProfilePage } from './../pages/user-profile/user-profile';
-import { TratamentoPage } from '../pages/tratamento/tratamento';
+
 
 const firebaseAppConfig: FirebaseAppConfig = {
   apiKey: "AIzaSyC4DC1iayAoawdRqOTfK1JkHchYNPcxag4",
@@ -53,6 +57,9 @@ const firebaseAppConfig: FirebaseAppConfig = {
     ListPage,
     SobrePage,
     TratamentoPage,
+    ExerciciosPage,
+    DicasPage,
+    ContatoPage,
     CapitalizePipe,
     CustomLoggedHeaderComponent,
     MessageBoxComponent,
@@ -81,7 +88,10 @@ const firebaseAppConfig: FirebaseAppConfig = {
     ChatPage,
     SobrePage,
     TratamentoPage,
-    UserProfilePage
+    DicasPage,
+    UserProfilePage,
+    ExerciciosPage,
+    ContatoPage
   ],
   providers: [
     AuthService,

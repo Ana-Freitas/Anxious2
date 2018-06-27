@@ -9,7 +9,7 @@
 
   <user-info [user]="currentUser"></user-info>
 
-  <button ion-button block (click)="canEdit = !canEdit">Edit</button>
+  <button ion-button block (click)="canEdit = !canEdit">Editar</button>
 
   <form (ngSubmit)="onSubmit($event)" *ngIf="canEdit" #profileForm="ngForm">
 
@@ -45,7 +45,7 @@
     <progress-bar *ngIf="uploadProgress" [progress]="uploadProgress"></progress-bar>
 
     <br>
-    <button ion-button block type="submit" [disabled]="profileForm.form.invalid">Save</button>
+    <button ion-button block type="submit" [disabled]="profileForm.form.invalid">Salvar</button>
 
   </form>
 

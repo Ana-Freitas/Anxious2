@@ -7,6 +7,11 @@
       Perfil
       <ion-icon name="person" item-end></ion-icon>
     </button>
+
+    <button ion-item icon-right detail-none menuClose="user-menu" (click)="Chat()">
+        Chat
+      </button>
+
     <button ion-item icon-right detail-none menuClose="user-menu" (click)="List()">
       Ansiedade
   </button>
@@ -15,9 +20,21 @@
     Tratamento
   </button>
 
+  <button ion-item icon-right detail-none menuClose="user-menu" (click)="Dicas()">
+   Dicas
+   </button>
+
+  <button ion-item icon-right detail-none menuClose="user-menu" (click)="Exercicios()">
+   Exercicios
+  </button>
+
   <button ion-item icon-right detail-none menuClose="user-menu" (click)="Sobre()">
     Sobre o App
   </button>
+
+  <button ion-item icon-right detail-none menuClose="user-menu" (click)="Contato()">
+      Entre em contato!
+    </button>
 
     <button ion-item icon-right detail-none menuClose="user-menu" (click)="onLogout()">
       Sair

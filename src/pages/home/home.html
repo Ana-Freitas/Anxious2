@@ -5,10 +5,10 @@
     <ion-toolbar>
       <ion-segment [(ngModel)]="view">
         <ion-segment-button value="chats">
-          Chats
+          Conversas
         </ion-segment-button>
         <ion-segment-button value="users">
-          Users
+          Usuários
         </ion-segment-button>
       </ion-segment>
     </ion-toolbar>
@@ -31,7 +31,7 @@
           <h2>{{ chat.title }}</h2>
           <p *ngIf="chat.lastMessage; else customMessage">{{ chat.timestamp | date:'dd/MM/y H:mm' }} - {{ chat.lastMessage }}</p>
           <ng-template #customMessage>
-            <p>No messages</p>
+            <p>Sem mensagens</p>
           </ng-template>
         </button>
       </ion-list>

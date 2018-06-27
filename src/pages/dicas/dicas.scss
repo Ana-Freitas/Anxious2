@@ -1,0 +1,40 @@
+page-dicas {
+    ion-navbar.toolbar > * {
+        text-align: center;
+        background: pink !important;
+    }
+
+    .scroll-content{ //imagem 
+        background: url(../../assets/imgs/img3.jpg);
+        height: 100vh; //imagem em tela inteira
+        background-attachment: fixed;
+        background-size: cover; //nao deixar espaço em branco
+        }
+
+        .card-md {
+            -webkit-padding-before: 20px;
+            -webkit-padding-after: 30px;
+            padding: 20px;
+          
+        }
+        .card-md h1 {
+            margin: 0 0 2px;
+            font-size: 20px;
+            font-weight: normal;
+            color: #1d0282;
+            font-weight: bold;
+        }
+        .card-md h2 {
+            margin: 2px 0;
+            font-size: 18px;
+            font-weight: normal;
+            color: #1b006b;
+            font-weight: bold;
+        }
+    .card-md p {
+        text-align: justify;
+        font-size: 20px;
+        font-family: Batang;
+        text-indent:2em //recuo da pagina
+    }
+}

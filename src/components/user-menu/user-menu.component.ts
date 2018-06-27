@@ -9,6 +9,10 @@ import { ListPage } from '../../pages/list/list';
 import { ChatPage } from '../../pages/chat/chat';
 import { SobrePage } from '../../pages/sobre/sobre';
 import { TratamentoPage } from '../../pages/tratamento/tratamento';
+import { ExerciciosPage } from '../../pages/exercicios/exercicios';
+import { DicasPage } from '../../pages/dicas/dicas';
+import { HomePage } from '../../pages/home/home';
+import { ContatoPage } from '../../pages/contato/contato';
 
 @Component({
   selector: 'user-menu',
@@ -43,4 +47,19 @@ export class UserMenuComponent extends BaseComponent {
     this.navCtrl.push(TratamentoPage);
   }
 
+  Exercicios() {
+    this.navCtrl.push(ExerciciosPage);
+  }
+
+  Dicas() {
+    this.navCtrl.push(DicasPage);
+  }
+
+  Chat() {
+   this.navCtrl.setRoot(HomePage);
+  }
+
+  Contato() {
+    this.navCtrl.push(ContatoPage);
+   }
 }
