@@ -1,8 +1,16 @@
 page-contato {
     .scroll-content{ //imagem 
-        background:url('../assets/imgs/img3.jpg') no-repeat;
+        background: url(../../assets/imgs/img3.jpg);
         height: 100vh; //imagem em tela inteira
         background-attachment: fixed;
         background-size: cover; //nao deixar espaço em branco
         }
+
+        .card-md {
+            -webkit-padding-before: 20px;
+            -webkit-padding-after: 30px;
+            padding: 20px;
+            background: url(../../assets/imgs/2.jpg);
+        }
+
 }

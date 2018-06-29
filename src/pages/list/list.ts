@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { TratamentoPage } from '../tratamento/tratamento';
 
 @Component({
   selector: 'page-list',
@@ -12,5 +13,8 @@ export class ListPage {
   
   }
 
+  Tratamento() {
+    this.navCtrl.push(TratamentoPage);
+  }
    
 }

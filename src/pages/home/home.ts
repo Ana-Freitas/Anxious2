@@ -21,9 +21,9 @@ import { Observable } from 'rxjs/Observable';
 })
 export class HomePage {
 
-  chats: Observable<Chat[]>;
-  users: Observable<User[]>;
-  view: string = 'chats';
+  conversas: Observable<Chat[]>;
+  usuarios: Observable<User[]>;
+  view: string = 'conversas';
 
   constructor(
     public authService: AuthService,
@@ -40,9 +40,9 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    this.chats = this.chatService.mapListKeys<Chat>(this.chatService.chats)
-      .map((chats: Chat[]) => chats.reverse());
-    this.users = this.userService.users;
+    this.conversas = this.chatService.mapListKeys<Chat>(this.chatService.conversas)
+      .map((conversas: Chat[]) => conversas.reverse());
+    this.usuarios = this.userService.usuarios;
 
     this.menuCtrl.enable(true, 'user-menu');
   }
@@ -50,22 +50,22 @@ export class HomePage {
   filterItems(event: any): void {
     let searchTerm: string = event.target.value;
 
-    this.chats = this.chatService.mapListKeys<Chat>(this.chatService.chats)
-      .map((chats: Chat[]) => chats.reverse());
-    this.users = this.userService.users;
+    this.conversas = this.chatService.mapListKeys<Chat>(this.chatService.conversas)
+      .map((conversas: Chat[]) => conversas.reverse());
+    this.usuarios = this.userService.usuarios;
 
     if (searchTerm) {
 
       switch(this.view) {
 
-        case 'chats':
-          this.chats = this.chats
-            .map((chats: Chat[]) => chats.filter((chat: Chat) => (chat.title && chat.title.toLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1)));
+        case 'conversas':
+          this.conversas = this.conversas
+            .map((conversas: Chat[]) => conversas.filter((chat: Chat) => (chat.title && chat.title.toLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1)));
           break;
           
-        case 'users':
-          this.users = this.users
-            .map((users: User[]) => users.filter((user: User) => (user.nome.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1)));
+        case 'usuarios':
+          this.usuarios = this.usuarios
+            .map((usuarios: User[]) => usuarios.filter((user: User) => (user.nome.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1)));
           break;
 
       }

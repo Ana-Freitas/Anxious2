@@ -4,10 +4,10 @@
   
     <ion-toolbar>
       <ion-segment [(ngModel)]="view">
-        <ion-segment-button value="chats">
+        <ion-segment-button value="conversas">
           Conversas
         </ion-segment-button>
-        <ion-segment-button value="users">
+        <ion-segment-button value="usuarios">
           Usuários
         </ion-segment-button>
       </ion-segment>
@@ -23,8 +23,8 @@
   
     <div [ngSwitch]="view">
   
-      <ion-list *ngSwitchCase="'chats'" no-lines>
-        <button ion-item *ngFor="let chat of chats | async" (click)="onChatOpen(chat)">
+      <ion-list *ngSwitchCase="'conversas'" no-lines>
+        <button ion-item *ngFor="let chat of conversas | async" (click)="onChatOpen(chat)">
           <ion-avatar item-start>
             <img [src]="chat.photo || 'assets/imgs/perfil.png'">
           </ion-avatar>
@@ -36,8 +36,8 @@
         </button>
       </ion-list>
   
-      <ion-list *ngSwitchCase="'users'" no-lines>
-        <button ion-item *ngFor="let user of users | async" (click)="onChatCreate(user)">
+      <ion-list *ngSwitchCase="'usuarios'" no-lines>
+        <button ion-item *ngFor="let user of usuarios | async" (click)="onChatCreate(user)">
           <ion-avatar item-start>
             <img [src]="user.photo || 'assets/imgs/perfil.png'">
           </ion-avatar>

@@ -17,7 +17,7 @@ import 'firebase/storage';
 @Injectable()
 export class UserService extends BaseService {
 
-  users: Observable<User[]>;
+  usuarios: Observable<User[]>;
   currentUser: AngularFireObject<User>;
 
   constructor(
@@ -31,13 +31,13 @@ export class UserService extends BaseService {
   }
 
   private setUsers(uidToExclude: string): void {
-    this.users = this.mapListKeys<User>(
-      this.db.list<User>(`/users`, 
+    this.usuarios = this.mapListKeys<User>(
+      this.db.list<User>(`/usuarios`, 
         (ref: firebase.database.Reference) => ref.orderByChild('nome')
       )
     )
-    .map((users: User[]) => {      
-      return users.filter((user: User) => user.$key !== uidToExclude);
+    .map((usuarios: User[]) => {      
+      return usuarios.filter((user: User) => user.$key !== uidToExclude);
     });
   }
 
@@ -47,14 +47,14 @@ export class UserService extends BaseService {
       .subscribe((authUser: firebase.User) => {
         if (authUser) {
           console.log('Auth state alterado!');          
-          this.currentUser = this.db.object(`/users/${authUser.uid}`);
+          this.currentUser = this.db.object(`/usuarios/${authUser.uid}`);
           this.setUsers(authUser.uid);
         }
       });
   }
 
   create(user: User, uuid: string): Promise<void> {
-    return this.db.object(`/users/${uuid}`)
+    return this.db.object(`/usuarios/${uuid}`)
       .set(user)
       .catch(this.handlePromiseError);
   }
@@ -66,24 +66,24 @@ export class UserService extends BaseService {
   }
 
   userExists(username: string): Observable<boolean> {
-    return this.db.list(`/users`, 
+    return this.db.list(`/usuarios`, 
       (ref: firebase.database.Reference) => ref.orderByChild('nome').equalTo(username)
     )
     .valueChanges()
-    .map((users: User[]) => {
-      return users.length > 0;
+    .map((usuarios: User[]) => {
+      return usuarios.length > 0;
     }).catch(this.handleObservableError);
   }
 
   get(userId: string): AngularFireObject<User> {
-    return this.db.object<User>(`/users/${userId}`);
+    return this.db.object<User>(`/usuarios/${userId}`);
   }
 
   uploadPhoto(file: File, userId: string): firebase.storage.UploadTask {
     return this.firebaseApp
       .storage()
       .ref()
-      .child(`/users/${userId}`)
+      .child(`/usuarios/${userId}`)
       .put(file);
   }
 

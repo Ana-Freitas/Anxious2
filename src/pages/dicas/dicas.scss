@@ -1,9 +1,4 @@
 page-dicas {
-    ion-navbar.toolbar > * {
-        text-align: center;
-        background: pink !important;
-    }
-
     .scroll-content{ //imagem 
         background: url(../../assets/imgs/img3.jpg);
         height: 100vh; //imagem em tela inteira
@@ -15,7 +10,7 @@ page-dicas {
             -webkit-padding-before: 20px;
             -webkit-padding-after: 30px;
             padding: 20px;
-          
+            background: url(../../assets/imgs/2.jpg);
         }
         .card-md h1 {
             margin: 0 0 2px;
@@ -26,7 +21,7 @@ page-dicas {
         }
         .card-md h2 {
             margin: 2px 0;
-            font-size: 18px;
+            font-size: 28px;
             font-weight: normal;
             color: #1b006b;
             font-weight: bold;
@@ -35,6 +30,12 @@ page-dicas {
         text-align: justify;
         font-size: 20px;
         font-family: Batang;
-        text-indent:2em //recuo da pagina
+        text-indent:4em //recuo da pagina
     }
+
+    ion-navbar.toolbar > * {
+        text-align: center;
+        background: pink !important;
+    }
+    
 }
